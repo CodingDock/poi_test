@@ -65,8 +65,9 @@ public class test {
         // Write the output to a file
         FileOutputStream fileOut = new FileOutputStream("D:/"+fileName+".xlsx");
         wb.write(fileOut);
-        fileOut.close();
         wb.close();
+        fileOut.flush();
+        fileOut.close();
 
     }
     
